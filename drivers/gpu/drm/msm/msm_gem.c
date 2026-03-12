@@ -955,7 +955,7 @@ static struct drm_gem_object *_msm_gem_new(struct drm_device *dev,
 		use_vram = true;
 
 	if (WARN_ON(use_vram && !priv->vram.size))
-		return ERR_PTR(-EINVAL);
+		/* return ERR_PTR(-EINVAL); */
 
 	use_vram = false;
 	
